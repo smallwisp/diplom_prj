@@ -38,7 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n\n\n // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n/* harmony import */ var _modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToSection */ \"./src/modules/scrollToSection.js\");\n\n\n\n // scrolling to section\n\n(0,_modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/scrollToSection.js":
+/*!****************************************!*\
+  !*** ./src/modules/scrollToSection.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar scrollToSection = function scrollToSection() {\n  var mobileMenu = document.querySelector('.mobile-menu');\n  document.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('ul')) {\n      var targetUlList = target.closest('a');\n      event.preventDefault();\n      var href = targetUlList.getAttribute('href').slice(1);\n      var scrollTarget = document.getElementById(href);\n      var topOffset = mobileMenu.offsetHeight;\n      var elementPosition = scrollTarget.getBoundingClientRect().top;\n      var offsetPosition = elementPosition - topOffset;\n      window.scrollBy({\n        top: offsetPosition,\n        behavior: 'smooth'\n      });\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollToSection);\n\n//# sourceURL=webpack://diplom/./src/modules/scrollToSection.js?");
 
 /***/ }),
 
@@ -49,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar toggleModal = function toggleModal() {\n  var modalCallback = document.querySelector('.modal-callback'),\n      modalOverlay = document.querySelector('.modal-overlay');\n  document.addEventListener('click', function (event) {\n    console.log(event.target);\n    var target = event.target;\n\n    if (target.classList.contains('callback-btn')) {\n      modalCallback.style.display = 'block';\n      modalOverlay.style.display = 'block';\n    } else if (target.closest('.modal-close') || target.classList.contains('modal-overlay')) {\n      modalCallback.style.display = 'none';\n      modalOverlay.style.display = 'none';\n    }\n\n    ;\n  });\n  /* callbackBtn.forEach((item) => {\r\n      item.addEventListener('click', () => {\r\n          modalCallback.style.display = 'block';\r\n          modalOverlay.style.display = 'block';\r\n      })\r\n  });\r\n    modalCallback.addEventListener('click', event => {\r\n          let target = event.target;\r\n            if (target.classList.contains('modal-close')) {\r\n              modalCallback.style.display = 'none';\r\n              modalOverlay.style.display = 'none';\r\n          } else {\r\n            }\r\n    });\r\n    modalOverlay.addEventListener('click', (event) => {\r\n      \r\n          modalCallback.style.display = 'none';\r\n          modalOverlay.style.display = 'none';\r\n      // }\r\n          \r\n  }) */\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toggleModal);\n\n//# sourceURL=webpack://diplom/./src/modules/toggleModal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar toggleModal = function toggleModal() {\n  var modalCallback = document.querySelector('.modal-callback'),\n      modalOverlay = document.querySelector('.modal-overlay');\n  document.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.classList.contains('callback-btn')) {\n      modalCallback.style.display = 'block';\n      modalOverlay.style.display = 'block';\n    } else if (target.closest('.modal-close') || target.classList.contains('modal-overlay')) {\n      modalCallback.style.display = 'none';\n      modalOverlay.style.display = 'none';\n    }\n\n    ;\n  });\n  /* callbackBtn.forEach((item) => {\r\n      item.addEventListener('click', () => {\r\n          modalCallback.style.display = 'block';\r\n          modalOverlay.style.display = 'block';\r\n      })\r\n  });\r\n    modalCallback.addEventListener('click', event => {\r\n          let target = event.target;\r\n            if (target.classList.contains('modal-close')) {\r\n              modalCallback.style.display = 'none';\r\n              modalOverlay.style.display = 'none';\r\n          } else {\r\n            }\r\n    });\r\n    modalOverlay.addEventListener('click', (event) => {\r\n      \r\n          modalCallback.style.display = 'none';\r\n          modalOverlay.style.display = 'none';\r\n      // }\r\n          \r\n  }) */\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toggleModal);\n\n//# sourceURL=webpack://diplom/./src/modules/toggleModal.js?");
 
 /***/ }),
 
@@ -451,7 +462,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("20a62c8dc1f158088ab4")
+/******/ 		__webpack_require__.h = () => ("ceaa142f2ffee91634d5")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

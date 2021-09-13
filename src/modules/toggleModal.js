@@ -3,7 +3,6 @@ const toggleModal = () => {
           modalOverlay = document.querySelector('.modal-overlay');
 
     document.addEventListener('click', (event) => {
-        console.log(event.target);
         let target = event.target;
         if (target.classList.contains('callback-btn')) {
             modalCallback.style.display = 'block';

@@ -4,7 +4,7 @@ const toggleModal = () => {
 
     document.addEventListener('click', (event) => {
         let target = event.target;
-        if (target.classList.contains('callback-btn')) {
+        if (target.classList.contains('callback-btn') || target.classList.contains('button-services')) {
             modalCallback.style.display = 'block';
             modalOverlay.style.display = 'block';
         } else if (target.closest('.modal-close') || target.classList.contains('modal-overlay')) {

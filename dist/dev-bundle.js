@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n/* harmony import */ var _modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToSection */ \"./src/modules/scrollToSection.js\");\n\n\n\n // scrolling to section\n\n(0,_modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n/* harmony import */ var _modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToSection */ \"./src/modules/scrollToSection.js\");\n\n\n\n // import topSlider from './modules/topSlider';\n// scrolling to section\n\n(0,_modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); // top slider\n// topSlider();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
 
 /***/ }),
 
@@ -462,7 +462,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("a37cfb63e73cb9f1ad9d")
+/******/ 		__webpack_require__.h = () => ("3c869ee2789fe1e3c4e0")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

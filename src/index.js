@@ -2,7 +2,7 @@
 
 import toggleModal from './modules/toggleModal';
 import scrollToSection from './modules/scrollToSection';
-// import topSlider from './modules/topSlider';
+import topSlider from './modules/topSlider';
 
 // scrolling to section
 scrollToSection();
@@ -11,6 +11,6 @@ scrollToSection();
 toggleModal();
 
 // top slider
-// topSlider();
+topSlider();
 
 

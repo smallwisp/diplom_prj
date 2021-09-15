@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n/* harmony import */ var _modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToSection */ \"./src/modules/scrollToSection.js\");\n\n\n\n // import topSlider from './modules/topSlider';\n// scrolling to section\n\n(0,_modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); // top slider\n// topSlider();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n/* harmony import */ var _modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToSection */ \"./src/modules/scrollToSection.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n\n\n\n\n // scrolling to section\n\n(0,_modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); // top slider\n\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
 
 /***/ }),
 
@@ -61,6 +61,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar toggleModal = function toggleModal() {\n  var modalCallback = document.querySelector('.modal-callback'),\n      modalOverlay = document.querySelector('.modal-overlay');\n  document.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.classList.contains('callback-btn') || target.classList.contains('button-services')) {\n      modalCallback.style.display = 'block';\n      modalOverlay.style.display = 'block';\n    } else if (target.closest('.modal-close') || target.classList.contains('modal-overlay')) {\n      modalCallback.style.display = 'none';\n      modalOverlay.style.display = 'none';\n    }\n\n    ;\n  });\n  /* callbackBtn.forEach((item) => {\r\n      item.addEventListener('click', () => {\r\n          modalCallback.style.display = 'block';\r\n          modalOverlay.style.display = 'block';\r\n      })\r\n  });\r\n    modalCallback.addEventListener('click', event => {\r\n          let target = event.target;\r\n            if (target.classList.contains('modal-close')) {\r\n              modalCallback.style.display = 'none';\r\n              modalOverlay.style.display = 'none';\r\n          } else {\r\n            }\r\n    });\r\n    modalOverlay.addEventListener('click', (event) => {\r\n      \r\n          modalCallback.style.display = 'none';\r\n          modalOverlay.style.display = 'none';\r\n      // }\r\n          \r\n  }) */\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toggleModal);\n\n//# sourceURL=webpack://diplom/./src/modules/toggleModal.js?");
+
+/***/ }),
+
+/***/ "./src/modules/topSlider.js":
+/*!**********************************!*\
+  !*** ./src/modules/topSlider.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  var itemSlide = document.querySelectorAll('.item'),\n      table = document.querySelectorAll('.table'),\n      sliderTop = document.querySelector('.top-slider');\n  var itemActive = document.createElement('style');\n  itemActive.cssText = \".active {\\n                        opacity: 1;\\n                        -webkit-transition: opacity .5s;\\n                        transition: opacity .5s;\\n                    }\";\n  document.getElementsByTagName('head')[0].appendChild(itemActive);\n  console.log(itemActive);\n  var currentSlide = 0;\n  var interval;\n\n  var prevSlide = function prevSlide(item, table, index) {\n    item[index].style.background = \"url(images/slide\".concat(index + 1, \".jpg) 50% 50% no-repeat\");\n    item[index].style.backgroundSize = 'cover';\n    table[index].style.opacity = '0';\n    table[index].style.visibility = 'hidden'; // item[index].style.transition = 'opacity .5s';\n\n    item[index].style.display = 'none'; // elem[index].classList.remove(strClass);\n  };\n\n  var nextSlide = function nextSlide(item, table, index) {\n    item[index].style.background = \"url(images/slide\".concat(index + 1, \".jpg) 50% 50% no-repeat\");\n    item[index].style.backgroundSize = 'cover';\n    table[index].style.opacity = '1';\n    table[index].style.visibility = 'visible';\n    item[index].style.display = 'block';\n    /* item[index].style.transition = 'opacity .5s';\r\n    item[index].style.display = 'none'; */\n  };\n\n  var autoPlaySlide = function autoPlaySlide() {\n    prevSlide(itemSlide, table, currentSlide);\n    currentSlide++;\n\n    if (currentSlide >= itemSlide.length) {\n      currentSlide = 0;\n    }\n\n    nextSlide(itemSlide, table, currentSlide);\n  };\n\n  var startSlide = function startSlide() {\n    var time = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;\n    interval = setInterval(autoPlaySlide, time);\n  };\n\n  startSlide();\n  console.log(sliderTop);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://diplom/./src/modules/topSlider.js?");
 
 /***/ }),
 
@@ -462,7 +473,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("3c869ee2789fe1e3c4e0")
+/******/ 		__webpack_require__.h = () => ("3680d9148adb4ab26822")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

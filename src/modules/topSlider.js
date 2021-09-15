@@ -2,14 +2,6 @@ const topSlider = () => {
     const itemSlide = document.querySelectorAll('.item'),
           table = document.querySelectorAll('.table'),
           sliderTop = document.querySelector('.top-slider');
-    let itemActive = document.createElement('style');
-    itemActive.cssText = `.active {
-                        opacity: 1;
-                        -webkit-transition: opacity .5s;
-                        transition: opacity .5s;
-                    }`;
-    document.getElementsByTagName('head')[0].appendChild(itemActive);
-    console.log(itemActive);
 
     let currentSlide = 0;
     let interval;
@@ -30,8 +22,7 @@ const topSlider = () => {
         table[index].style.opacity = '1';
         table[index].style.visibility = 'visible';
         item[index].style.display = 'block';
-        /* item[index].style.transition = 'opacity .5s';
-        item[index].style.display = 'none'; */
+        
     };
 
     const autoPlaySlide = () => {

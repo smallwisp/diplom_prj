@@ -1,7 +1,6 @@
 const smoothScroll = () => {
     const scrollUp = document.querySelector('.up');
     const servicesSection = document.querySelector('.services-section');
-    console.log(servicesSection.getBoundingClientRect().top);
     document.addEventListener('scroll', () => {
         let scrollTop = document.documentElement.scrollTop;
         const servicesSectionTop = servicesSection.getBoundingClientRect().top;

@@ -39,8 +39,6 @@ const topSlider = () => {
     };
 
     startSlide();  
-
-    console.log(sliderTop);
 };
 
 export default topSlider;

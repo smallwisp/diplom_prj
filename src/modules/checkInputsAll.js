@@ -42,8 +42,6 @@ const checkInputsAll = () => {
             });
 
         });
-
-
     };
 
 export default checkInputsAll;

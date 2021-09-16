@@ -14,33 +14,6 @@ const toggleModal = () => {
 
 
     });
-    /* callbackBtn.forEach((item) => {
-        item.addEventListener('click', () => {
-            modalCallback.style.display = 'block';
-            modalOverlay.style.display = 'block';
-        })
-    });
-
-    modalCallback.addEventListener('click', event => {
-            let target = event.target;
-
-            if (target.classList.contains('modal-close')) {
-                modalCallback.style.display = 'none';
-                modalOverlay.style.display = 'none';
-            } else {
-
-            }
-
-    });
-
-    modalOverlay.addEventListener('click', (event) => {
-        
-            modalCallback.style.display = 'none';
-            modalOverlay.style.display = 'none';
-        // }
-            
-    }) */
-
 };
 
 export default toggleModal;

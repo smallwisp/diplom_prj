@@ -7,6 +7,7 @@ import smoothScroll from './modules/smoothScroll';
 import sendForm from './modules/sendForm';
 import checkInputsAll from './modules/checkInputsAll';
 import accordeon from './modules/accordeon';
+import sliderCarousel from './modules/sliderCarousel';
 
 // scrolling to section
 scrollToSection();
@@ -28,6 +29,9 @@ sendForm();
 
 // faq accordeon
 accordeon();
+
+// slider carousel
+sliderCarousel();
 
 
 

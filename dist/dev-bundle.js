@@ -38,7 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n/* harmony import */ var _modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToSection */ \"./src/modules/scrollToSection.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./src/modules/smoothScroll.js\");\n/* harmony import */ var _modules_sendForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/sendForm */ \"./src/modules/sendForm.js\");\n/* harmony import */ var _modules_checkInputsAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/checkInputsAll */ \"./src/modules/checkInputsAll.js\");\n\n\n\n\n\n\n\n // scrolling to section\n\n(0,_modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); // top slider\n\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(); // scroll to top\n\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(); // checking form inputs\n\n(0,_modules_checkInputsAll__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(); // send form\n\n(0,_modules_sendForm__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleModal */ \"./src/modules/toggleModal.js\");\n/* harmony import */ var _modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollToSection */ \"./src/modules/scrollToSection.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./src/modules/smoothScroll.js\");\n/* harmony import */ var _modules_sendForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/sendForm */ \"./src/modules/sendForm.js\");\n/* harmony import */ var _modules_checkInputsAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/checkInputsAll */ \"./src/modules/checkInputsAll.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n\n\n\n\n\n\n\n\n // scrolling to section\n\n(0,_modules_scrollToSection__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // calling a modal window\n\n(0,_modules_toggleModal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); // top slider\n\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(); // scroll to top\n\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(); // checking form inputs\n\n(0,_modules_checkInputsAll__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(); // send form\n\n(0,_modules_sendForm__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(); // faq accordeon\n\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n\n//# sourceURL=webpack://diplom/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/accordeon.js":
+/*!**********************************!*\
+  !*** ./src/modules/accordeon.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {\n  var elemsContent = document.querySelectorAll('.element');\n\n  var removeActive = function removeActive(elems, selector) {\n    elems.forEach(function (item) {\n      item.classList.remove(selector);\n      item.lastChild.previousSibling.style.display = 'none';\n    });\n  };\n\n  removeActive(elemsContent, 'active');\n  elemsContent.forEach(function (item) {\n    item.addEventListener('click', function (event) {\n      var target = event.target;\n      removeActive(elemsContent, 'active');\n      target.parentNode.classList.toggle('active');\n\n      if (target.parentNode.classList.contains('active')) {\n        target.nextSibling.nextSibling.style.display = 'block';\n      } else {\n        target.nextSibling.nextSibling.style.display = 'none';\n      }\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://diplom/./src/modules/accordeon.js?");
 
 /***/ }),
 
@@ -517,7 +528,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("ff43aeadd8b1cf4f87b0")
+/******/ 		__webpack_require__.h = () => ("a656a27e8268e852a78c")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

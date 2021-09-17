@@ -1,7 +1,6 @@
 const topSlider = () => {
     const itemSlide = document.querySelectorAll('.item'),
-          table = document.querySelectorAll('.table'),
-          sliderTop = document.querySelector('.top-slider');
+          table = document.querySelectorAll('.table');
 
     let currentSlide = 0;
     let interval;
@@ -11,9 +10,7 @@ const topSlider = () => {
         item[index].style.backgroundSize = 'cover';
         table[index].style.opacity = '0';
         table[index].style.visibility = 'hidden';
-        // item[index].style.transition = 'opacity .5s';
         item[index].style.display = 'none';
-        // elem[index].classList.remove(strClass);
     };
 
     const nextSlide = (item, table, index) => {

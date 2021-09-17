@@ -1,7 +1,44 @@
 const accordeon = () => {
-    const elemsContent = document.querySelectorAll('.element');
+    const accordeonBlock = document.querySelector('.accordeon'),
+          elems = accordeonBlock.querySelectorAll('.element'),
+          elemsContent = accordeonBlock.querySelectorAll('.element-content');
+          console.log(elems);
 
-    const removeActive = (elems, selector) => {
+    elems.forEach(item => {
+        item.classList.remove('active');
+    });
+    elemsContent.forEach(item => {
+        item.style.display = 'none';
+    });
+
+    const setActive = (index) => {
+        for (let i = 0; i < elems.length; i++) {
+            if (i === index) {
+                elems[i].classList.add('active');
+                console.log(elemsContent[i]);
+                elemsContent[i].style.display = 'block';
+            } else {
+                elems[i].classList.remove('active');
+                console.log(elemsContent[i]);
+                elemsContent[i].style.display = 'none';
+            }
+        }
+    };
+
+    accordeonBlock.addEventListener('click', (event) => {
+        let target = event.target;
+        target = target.closest('.title');
+
+        if (target) {
+            elems.forEach((item, index) => {
+                if (item === target.parentNode) {
+                    console.log(item, index);
+                    setActive(index);
+                }
+            });
+        }
+    })
+    /* const removeActive = (elems, selector) => {
         elems.forEach(item => {
             item.classList.remove(selector);
             item.lastChild.previousSibling.style.display = 'none';
@@ -22,7 +59,8 @@ const accordeon = () => {
                 target.nextSibling.nextSibling.style.display = 'none';
             }
         })
-    });
+    }); */
+
 };
 
 export default accordeon;

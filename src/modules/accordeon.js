@@ -2,7 +2,6 @@ const accordeon = () => {
     const accordeonBlock = document.querySelector('.accordeon'),
           elems = accordeonBlock.querySelectorAll('.element'),
           elemsContent = accordeonBlock.querySelectorAll('.element-content');
-          console.log(elems);
 
     elems.forEach(item => {
         item.classList.remove('active');
@@ -15,11 +14,9 @@ const accordeon = () => {
         for (let i = 0; i < elems.length; i++) {
             if (i === index) {
                 elems[i].classList.add('active');
-                console.log(elemsContent[i]);
                 elemsContent[i].style.display = 'block';
             } else {
                 elems[i].classList.remove('active');
-                console.log(elemsContent[i]);
                 elemsContent[i].style.display = 'none';
             }
         }
@@ -32,7 +29,6 @@ const accordeon = () => {
         if (target) {
             elems.forEach((item, index) => {
                 if (item === target.parentNode) {
-                    console.log(item, index);
                     setActive(index);
                 }
             });

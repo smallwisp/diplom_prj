@@ -2,7 +2,6 @@ const accordeon = () => {
     const accordeonBlock = document.querySelector('.accordeon'),
           elems = accordeonBlock.querySelectorAll('.element'),
           elemsContent = accordeonBlock.querySelectorAll('.element-content');
-          console.log(elems);
 
     elems.forEach(item => {
         item.classList.remove('active');

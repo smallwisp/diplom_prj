@@ -31,7 +31,12 @@ sendForm();
 accordeon();
 
 // slider carousel
-const carousel = new SliderCarousel();
+const carousel = new SliderCarousel({
+    main: '.carousel',
+    wrap: '.services-carousel'
+});
+
+carousel.init();
 
 
 

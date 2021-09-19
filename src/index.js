@@ -33,7 +33,24 @@ accordeon();
 // slider carousel
 const carousel = new SliderCarousel({
     main: '.carousel',
-    wrap: '.services-carousel'
+    wrap: '.services-carousel',
+    prev: '.arrow-left',
+    next: '.arrow-right',
+    slidesToShow: 3,
+    infinity: true,
+    responsive: [{
+        breakpoint: 1024,
+        slidesToShow: 3
+    }, 
+    {
+        breakpoint: 768,
+        slidesToShow: 2
+    },
+    {
+        breakpoint: 576,
+        slidesToShow: 1
+    }
+    ]
 });
 
 carousel.init();

@@ -64,14 +64,10 @@ class SliderCarousel {
                 overflow: hidden !important;
             }
             .slider-carousel__wrap {
-                
-                
-
                 transition: transform 0.5s !important;
                 will-change: transform !important;
             }
             slider-carousel__item {
-                
                 display: flex !important;
                 flex: 0 0 ${this.options.widthSlide}!important;
                 margin: auto 0 !important;
@@ -111,7 +107,7 @@ class SliderCarousel {
     nextSlider() {
         if (this.options.infinity || (this.options.position < this.options.maxPosition)) {
             ++this.options.position;
-            console.log(this.slidesToShow);
+            console.log(this.options.position);
             if (this.options.position > this.options.maxPosition) {
                 this.options.position = 0;
             }

@@ -64,7 +64,9 @@ class SliderCarousel {
                 overflow: hidden !important;
             }
             .slider-carousel__wrap {
-                width: 1180px;
+                
+                
+
                 transition: transform 0.5s !important;
                 will-change: transform !important;
             }

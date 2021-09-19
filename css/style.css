@@ -1235,7 +1235,7 @@ video#video_background {
 /**** /. services section *****/
 
 .carousel {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     /* width: 380px; */
     /* height: 470px; */
@@ -1246,14 +1246,18 @@ video#video_background {
 
 .services-carousel {
     /* width: 100vw;*/
-    width: 1180px;
+    width: 1200px;
     height: 440px;
     display: flex;
 }
 
+.services-elements{
+    overflow: hidden;
+}
+
 
 .slide {
-    /* width: 400px; */
+    min-width: 395px;
     height: 440px;
     flex-shrink: 0;
     display: flex;
@@ -1262,7 +1266,7 @@ video#video_background {
 }
 
 .slide-wrapper {
-    padding: 0px 10px;
+    /* padding: 0px 10px; */
 }
 
 .slide-wrapper:first-child {

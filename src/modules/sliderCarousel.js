@@ -64,14 +64,12 @@ class SliderCarousel {
                 overflow: hidden !important;
             }
             .slider-carousel__wrap {
-                
-
+                width: 1180px;
                 transition: transform 0.5s !important;
                 will-change: transform !important;
             }
             slider-carousel__item {
-                width: 400px !important;
-	            height: 440px !important;
+                
                 display: flex !important;
                 flex: 0 0 ${this.options.widthSlide}!important;
                 margin: auto 0 !important;
